@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  callname: MyString
+  date: 2016-05-29
+  accessability: 1
+  retainability: 1
+
+two:
+  callname: MyString
+  date: 2016-05-29
+  accessability: 1
+  retainability: 1

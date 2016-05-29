@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Callname:</strong>
+  <%= @statistc.callname %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @statistc.date %>
+</p>
+
+<p>
+  <strong>Accessability:</strong>
+  <%= @statistc.accessability %>
+</p>
+
+<p>
+  <strong>Retainability:</strong>
+  <%= @statistc.retainability %>
+</p>
+
+<%= link_to 'Edit', edit_statistc_path(@statistc) %> |
+<%= link_to 'Back', statistcs_path %>

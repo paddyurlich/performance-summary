@@ -1,0 +1,33 @@
+<%= form_for(@statistc) do |f| %>
+  <% if @statistc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statistc.errors.count, "error") %> prohibited this statistc from being saved:</h2>
+
+      <ul>
+      <% @statistc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :callname %><br>
+    <%= f.text_field :callname %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :accessability %><br>
+    <%= f.number_field :accessability %>
+  </div>
+  <div class="field">
+    <%= f.label :retainability %><br>
+    <%= f.number_field :retainability %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

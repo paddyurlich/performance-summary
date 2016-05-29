@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Statistcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cellname</th>
+      <th>Date</th>
+      <th>Accessability</th>
+      <th>Retainability</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statistcs.each do |statistc| %>
+      <tr>
+        <td><%= statistc.cellname %></td>
+        <td><%= statistc.date %></td>
+        <td><%= statistc.accessability %></td>
+        <td><%= statistc.retainability %></td>
+        <td><%= link_to 'Show', statistc %></td>
+        <td><%= link_to 'Edit', edit_statistc_path(statistc) %></td>
+        <td><%= link_to 'Destroy', statistc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Statistc', new_statistc_path %>
+
+
+
+<h3>Import Stats</h3>
+<%= form_tag import_statistcs_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Statistcs", class: 'btn btn-default' %>
+<% end %>
+
+<h3>Download File</h3>
+<%#= link_to "Report", companies_path(format: "csv"), class: 'btn btn-default' %>
