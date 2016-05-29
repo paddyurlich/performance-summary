@@ -1,5 +1,15 @@
 == README
 
+Git a small demo of CSV upload to DB ActiveRecord
+
+remember to require 'csv'
+
+database coloums:
+cellname
+date
+accessability
+retainability
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
